@@ -1,0 +1,63 @@
+# This is a yaml file for practice. (this line is comment!)
+name: Workflow Name
+
+#> YAML Data Types:
+# 1. Scaler (Simple) Data types:
+name: Ziad Khaled                       # string
+age: 26                                 # int
+salary: 10000.50                        # float
+is_active: true                         # boolean
+hiring_data: 2023-10-01T08:30:00Z       # date-time (with time zone Z => GMT)
+
+serial_number: "00220"       # double-qoutes for string here required to not interpret this as int!
+regex: "[0-9][A-Z]"
+
+message: "Hello\nWorld"       # string with new-line 
+meeage: 'It''s YAML file \n'  # ' used to escape ' and \n is leteral here.
+path: "C:\\Users\\Administrator"    # \\ to don't escape the \
+path: 'C:\Users\Administrator'      # that's OK.
+
+multi_line_message: |           # letteral block scaler.
+  first line,,
+  second line,,
+# first line,,
+# second line,,
+
+
+folded_message: >
+  first statement;
+  second statement;
+# first statement; second statement;
+
+
+
+#> Collections:
+# 1. Map:
+employee:
+  name: Hossam Khaled
+  age: 31
+  contact: 
+    email: hk@example.com
+    phone: 01xxxxxxxxxxx
+
+
+# 2. List:  can contail scaler data type or a map
+employees:
+  - name: Kareem
+    age: 27
+    contact:
+      email: kareem@example.com
+      phone: 0123456789
+  - name: Amr
+    age: 29
+    contact:
+      email: amr@example.com
+      phone: 0198765432
+  - name: Ramy
+    age: 34
+    contact:
+      email: ramy@example.com
+      phone: 01234598766
+
+
+   
