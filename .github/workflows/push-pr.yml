@@ -1,0 +1,25 @@
+name: Push and PR workflow
+on:
+  push:                   # push is a web-hook-based trigger.
+    branches:
+      - main
+      - "release/**"
+    paths:                # define paths that work flow will run when any changes pushed from them.
+      - "src/**"
+
+  pull_request:
+    branches:
+      - main
+      - "release/**"
+    paths:
+      - "src/**"
+
+jobs:
+  test:                                           # job name
+    runs-on: ubuntu-latest                        # job runner
+    steps:                                        # job steps
+      - name: Checkout Code                       # step name
+        uses: actions/checkout@v4.2.2
+
+      - name: Run Tests
+        run: npm test
